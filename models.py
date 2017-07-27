@@ -21,4 +21,6 @@ class product(models.Model):
     Price = models.DecimalField()
     category = models.CharField(max_lenght=1, help_text="Seleccione la categoria",choices=categories)
 
-    
+class stock (models.Model):
+    product=models.ForeignKey(product)
+    stock=models.Integerfield(help_text="Ingrese la cantidad de productos existentes")
